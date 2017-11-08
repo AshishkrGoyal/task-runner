@@ -13,6 +13,7 @@
 	'use strict';
 
 	// based on http://responsejs.com/labs/dimensions/
+	//Ashishkr Goyal
 	function getViewport(axis) {
 		var client, inner;
 		if( axis === 'x' ) {

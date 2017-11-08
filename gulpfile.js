@@ -23,3 +23,9 @@ gulp.task('images',function () {
 gulp.task('default', function () {
     console.log('Ashishkr At Default Task');
 });
+
+gulp.task('watch',function () {
+    console.log('Ashishkr At Watcher!!');
+    require('./server');
+    return gulp.watch('./js_/**/*.js',['scripts'])
+});
