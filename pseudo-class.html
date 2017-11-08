@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pseudo-class</title>
+
+    <style>
+        a:only-of-type /*(other child also may be possible)it a must be single there in the section*/
+        {
+            color: red;
+            border: 2px solid black;
+        }
+        a:only-child    /*(other child may not be possible)it must be the only one in the section*/
+        {
+            color: blue;
+            border: 4px dashed black;
+        }
+        a:first-of-type /*fetch first type of anchor tag from the section(it is open to section)*/
+        {
+            color: green;
+            border: 1px solid coral;
+        }
+        a:last-of-type /*fetch last of anchor tag from the section(it is open to section)*/
+        {
+            color: aqua;
+            font-weight: bolder;
+        }
+        a:last-child /*where in the section only last child is an anchor tag fetch it(it is bounded)*/
+        {
+            color: fuchsia;
+            font-style: italic;
+        }
+        a:first-child/*where in the section only first child is an anchor tag fetch it(it is bounded)*/
+        {
+            font-style: italic;
+            color: green;
+            font-size: xx-large;
+        }
+        a:nth-child(4)
+        {
+            font-size: small;
+            color: orange;
+        }
+        .box-1
+        {
+            float: left;
+            background-color: orange;
+        }
+        .box-2
+        {
+            float: right;
+            background-color: cornflowerblue;
+        }
+        .box-3
+        {
+            float: left;
+            background-color: fuchsia;
+        }
+        .box-1,.box-2,.box-3
+        {
+            height: 200px;
+            width: 200px;
+            /*background-color: cornflowerblue;*/
+        }
+        img
+        {
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<a href="#">Ashishkr</a>
+<a href="#">Ashishkr</a>
+
+<div>
+    <a href="#">Ashishkrwithin div</a>
+    <div>
+    <a href="#">Ashishkrwithih div > div</a>
+    <a href="#">Ashishkrwithin div > div 2</a>
+    <ul>
+        <li>
+            <a href="#">Ashishkr within div> ul</a>
+            <a href="#">Ashishkr within div> ul1</a>
+        </li>
+    </ul>
+    <a href="#">Ashishkrwithin div > div last</a>
+</div>
+</div>
+
+<a href="#">Ashishkr</a>
+
+
+<div class="box-1"></div>
+<div class="box-2"></div>
+<div class="box-3"></div>
+
+<img src="Ashu_ag.jpg" alt="Ashihskr">
+</body>
+</html>

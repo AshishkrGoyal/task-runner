@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>logo-dev</title>
+    <style>
+        *
+        {
+            box-sizing: content-box;
+        }
+        .logo
+        {
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+            height: 150px;
+            width: 150px;
+            background-color: transparent;
+            border:8px solid black;
+            position: relative;
+        }
+        .div-1
+        {
+            width: 25%;
+            background-color: indianred;
+            border-right: 8px solid black;
+        }
+        .div-2
+        {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+        }
+        .div-2-1
+        {
+            height: 50%;
+            border-bottom: 8px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+        .div-2-1-1
+        {
+            width: 75%;
+            border-right: 8px solid black;
+        }
+        .div-2-2
+        {
+            height: 50%;
+            background-color: chocolate;
+        }
+        div.logo::before,div.logo::after
+        {
+            z-index: 1;
+            box-sizing: border-box;
+            content: '';
+            position: absolute;
+            border: 4px solid transparent;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="logo">
+    <div class="div-1"></div>
+    <div class="div-2">
+        <div class="div-2-1">
+            <div class="div-2-1-1"></div>
+            <div class="div-2-1-2"></div>
+        </div>
+        <div class="div-2-2"></div>
+    </div>
+</div>
+
+
+</body>
+</html>

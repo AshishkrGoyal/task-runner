@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pseudo-selector</title>
+    <style>
+        :root
+        {
+            background-color: indianred;
+        }
+        span+p
+        {
+            color: white;
+        }
+        p:not(.active)
+        {
+            font-style: italic;
+            font-size: large;
+        }
+        span+span
+        {
+            font-weight: bolder;
+        }
+        p:first-letter
+        {
+            font-family: "Bell MT";
+            font-size: x-large;
+        }
+        span:first-letter
+        {
+            font-size: xx-large;
+        }
+
+
+        /*first method*/
+        /*section.target:nth-child(2)
+        {
+            font-size: xx-large;
+        }*/
+
+
+        /*second method*/
+        /*section.target:nth-of-type(2)
+        {
+            font-size: xx-large;
+        }*/
+
+        /*third method*/
+        .target
+        {
+            font-size: xx-large;
+        }
+        .target ~ .target
+        {
+            font-size: small;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+
+<div>
+    <span>Ashishkr(span)</span>
+    <span>Ashishgoyal</span>
+    <p>Ashishkr1</p>
+    <p class="active">Ashishkr2</p>
+    <span>Ashishkr(span-down)</span>
+    <span>Ashishkr2span</span>
+    <p>Ashishkrgoyal</p>
+</div>
+
+
+<!--It is for trying pseudo selectors-->
+<!--here i just want to color second section with target class without writing inline css code-->
+<section class="main">
+    <section class="target">Ashish</section>
+    <section class="target">Ashish</section>
+    <section class="target">Ashish</section>
+    <section class="target">Ashish</section>
+</section>
+
+</body>
+</html>

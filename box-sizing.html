@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box-sizing</title>
+    <style>
+        .parent
+        {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+        .div-1,.div-2
+        {
+            height: 200px;
+            width: 200px;
+            background-color: cornflowerblue;
+            margin: 12px;
+            padding: 12px;
+        }
+        .div-1
+        {
+            box-sizing: content-box;
+        }
+        .div-2
+        {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="parent">
+<div class="div-1">
+   Ashishkr div 1
+</div>
+<br><br>
+<div class="div-2">
+    Ashishkr div 2
+</div>
+</div>
+</body>
+</html>
