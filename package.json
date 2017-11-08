@@ -9,7 +9,7 @@
   "author": "Ashishkr",
   "license": "ISC",
   "dependencies": {
-
+    "static-server": "^2.0.6"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
