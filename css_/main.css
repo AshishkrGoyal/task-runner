@@ -1,0 +1,27 @@
+body
+{
+    width: 100%;
+}
+.parent
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.div-1,.div-2
+{
+    height: 200px;
+    width: 200px;
+    background-color: indianred;
+    margin: 12px;
+    padding: 12px;
+}
+.div-1
+{
+    box-sizing: content-box;
+}
+.div-2
+{
+    box-sizing: border-box;
+}

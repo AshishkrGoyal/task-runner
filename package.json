@@ -9,6 +9,7 @@
   "author": "Ashishkr",
   "license": "ISC",
   "dependencies": {
+    "gulp-concat": "^2.6.1",
     "static-server": "^2.0.6"
   },
   "devDependencies": {
