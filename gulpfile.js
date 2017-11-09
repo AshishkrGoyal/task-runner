@@ -5,17 +5,19 @@ const concat = require('gulp-concat');
 const cleanCss = require('gulp-clean-css');
 const autopreFixer = require('gulp-autoprefixer');
 const plumber = require('gulp-plumber');
-
+const sourceMaps = require('gulp-sourcemaps');
 
 gulp.task('styles', function () {
     console.log('Ashishkr');
     return gulp.src('./css_/**/*.css')
+        .pipe(sourceMaps.init())
         .pipe(plumber(function (err) {
             console.log(err);
         }))
         .pipe(autopreFixer())
         .pipe(concat('style.css'))
         .pipe(cleanCss())
+        .pipe(sourceMaps.write())
         .pipe(gulp.dest('./css_min/'))
         .pipe(liveReload())
 });
