@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const uglify = require('gulp-uglify');
+const liveReload = require('gulp-livereload');
 
 gulp.task('styles', function () {
     console.log('Ashishkr');
@@ -9,9 +10,10 @@ gulp.task('styles', function () {
 gulp.task('scripts',function () {
     console.log('Ashishkr At Starting Scripts');
 
-    return gulp.src('./js_/*.js')
+    return gulp.src('./js_/**/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('./js_/js_min'))
+        .pipe(gulp.dest('./js_min'))
+        .pipe(liveReload())
 });
 
 
@@ -27,5 +29,6 @@ gulp.task('default', function () {
 gulp.task('watch',function () {
     console.log('Ashishkr At Watcher!!');
     require('./server');
-    return gulp.watch('./js_/**/*.js',['scripts'])
+    liveReload.listen();
+    gulp.watch('./js_/**/*.js',['scripts'])
 });
